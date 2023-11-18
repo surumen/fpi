@@ -1,29 +1,9 @@
 import datetime
 from typing import List
+from client.models.common.player_stats import OVERALL_STATS, OFFENSIVE_STATS, PASSING_STATS, DEFENSIVE_STATS
 
-OVERALL_STATS = [
-    'total_apps', 'starting_apps', 'sub_apps', 'mins_played', 'motm', 'rating', 'mins'
-]
 
-OFFENSIVE_STATS = [
-    'goals', 'assists', 'shots_per_game', 'possession_lost', 'bad_touch',
-]
-
-PASSING_STATS = [
-    'pass_accuracy', 'passes_per_game', 'key_passes_per_game',
-    'dribbles_per_game', 'fouls_won_per_game', 'offsides_per_game',
-]
-
-DEFENSIVE_STATS = [
-    'tackles_per_game', 'interceptions_per_game', 'clearances_per_game', 'blocks_per_game',
-    'clearances_per_game', 'own_goals', 'dribbled_past'
-]
-
-DISCIPLINE_STATS = [
-    'fouls_conceded_per_game', 'yellow', 'red'
-]
-
-_PLAYER_STATS = OVERALL_STATS + OFFENSIVE_STATS + PASSING_STATS + DEFENSIVE_STATS + DISCIPLINE_STATS
+_PLAYER_STATS = OVERALL_STATS + OFFENSIVE_STATS + PASSING_STATS + DEFENSIVE_STATS
 
 
 class Player:

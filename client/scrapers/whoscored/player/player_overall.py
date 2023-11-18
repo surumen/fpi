@@ -1,15 +1,15 @@
 import time
 import pandas as pd
 from selenium.webdriver.common.by import By
-from client.models.player import OVERALL_STATS, DISCIPLINE_STATS
 from client.scrapers.whoscored import _WEB_DRIVER
 from client.utils import change_empty_df_values
+from client.models.common.player_stats import OVERALL_STATS
 
 
 _PLAYERS_TABLE_ROW_SELECTOR = '#player-table-statistics-body tr'
 
 
-def crawl_player_summary(team_id: int, api_delay_term=5):
+def crawl_player_overall_stats(team_id: int, api_delay_term=5):
     """
     crawling player summary data
 
@@ -29,7 +29,7 @@ def crawl_player_summary(team_id: int, api_delay_term=5):
     time.sleep(api_delay_term)
 
     # initialize dataframe
-    player_summary_df = pd.DataFrame(columns=OVERALL_STATS + DISCIPLINE_STATS)
+    player_summary_df = pd.DataFrame(columns=OVERALL_STATS)
 
     # get players data
     elements = _WEB_DRIVER.find_elements(By.CSS_SELECTOR, _PLAYERS_TABLE_ROW_SELECTOR)
@@ -50,10 +50,10 @@ def crawl_player_summary(team_id: int, api_delay_term=5):
 
         player_dict = {
             'name': name,
+            'total_apps': full_time + half_time,
             'starting_apps': full_time,
             'sub_apps': half_time,
-            'total_apps': full_time + half_time,
-            'mins': element.find_elements(By.CSS_SELECTOR, 'td')[5].text,
+            'mins_played': element.find_elements(By.CSS_SELECTOR, 'td')[5].text,
             'yellow': element.find_elements(By.CSS_SELECTOR, 'td')[8].text,
             'red': element.find_elements(By.CSS_SELECTOR, 'td')[9].text,
             'motm': element.find_elements(By.CSS_SELECTOR, 'td')[13].text,
