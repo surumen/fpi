@@ -1,5 +1,5 @@
 from typing import List
-from category import RecordCategory
+from utils.common.category import RecordCategory
 from league import League
 
 
