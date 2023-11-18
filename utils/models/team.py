@@ -1,6 +1,6 @@
 from typing import List
-from utils.common.category import RecordCategory
-from league import League
+from utils.models.common import RecordCategory
+from utils.models.league import League
 
 
 class Team:
