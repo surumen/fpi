@@ -1,0 +1,5 @@
+league,matches,goals_scored,shots,yellow_cards,red_cards,possession,pass_accuracy,aerial_duels_won,rating,shots_conceded,tackles,interceptions,fouls_conceded,offsides,shots_on_target,dribbles_won,fouls_won
+Premier League,12,13,14.8,26,0,53.7,84.1,11,6.61,14,16.3,6.4,10.5,16.3,4.8,8.5,9.3
+League Cup,2,3,13.5,5,0,65.7,88.1,8.5,6.57,7,19,8.5,16,19,4.5,6.5,8
+Champions League,4,9,12.3,5,2,48.2,82.3,13.8,6.55,16.3,11.3,8,9.3,11.3,5.5,9.8,8.5
+Total / Average,18,25,14.1,36,2,53.8,84.2,11.3,6.59,13.7,15.4,7,10.8,15.4,4.9,8.6,9
