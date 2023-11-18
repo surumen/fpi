@@ -37,15 +37,15 @@ class Player:
                  image: str,
                  height: int,
                  weight: int,
-                 positions: List[str],
-                 date_of_birth: datetime.date,
+                 positions: str,
+                 dob: str,
                  transfer_value: str,
                  wage: str,
                  preferred_foot: str,
                  club_name: str,
                  club_logo: str,
                  club_kit_number: int,
-                 club_joined: datetime.date,
+                 club_joined: str,
                  club_contract_valid_until: str,
                  country_flag: str,
 
@@ -59,8 +59,8 @@ class Player:
         self.image = image
         self.height = height
         self.weight = weight
-        self.positions = positions
-        self.date_of_birth = date_of_birth
+        self.positions = positions.split(',')
+        self.date_of_birth = datetime.datetime.strptime(dob, '%Y-%m-%d')
         self.transfer_value = transfer_value
         self.wage = wage
         self.preferred_foot = preferred_foot
