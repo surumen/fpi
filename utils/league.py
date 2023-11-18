@@ -1,0 +1,8 @@
+
+
+class League:
+
+    def __init__(self, league_id, league_name):
+        self.league_id = league_id
+        self.league_name = league_name
+
