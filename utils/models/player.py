@@ -1,7 +1,6 @@
 import datetime
 from typing import List
 
-
 _OVERALL_STATS = [
     'total_apps', 'starting_apps', 'sub_apps', 'mins_played',
 ]
@@ -81,3 +80,5 @@ class Player:
         for stat in stats:
             setattr(self, '{stat}'.format(stat=stat), data.get(stat))
 
+    def __repr__(self):
+        return '{name}, {team}-{position}'.format(name=self.name, team=self.club_name, position=','.join(self.positions))

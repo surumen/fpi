@@ -1,5 +1,5 @@
 from typing import List
-from utils.models.common import RecordCategory
+from utils.models.common.category import RecordCategory
 from utils.models.league import League
 
 
@@ -10,6 +10,9 @@ class Team:
         self.name = name
         self.team_id = team_id
         self.leagues = leagues
+
+    def __repr__(self):
+        return '{name}'.format(name=self.name)
 
 
 class TeamSummary:
