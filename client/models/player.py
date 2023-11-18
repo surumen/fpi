@@ -1,29 +1,29 @@
 import datetime
 from typing import List
 
-_OVERALL_STATS = [
-    'total_apps', 'starting_apps', 'sub_apps', 'mins_played',
+OVERALL_STATS = [
+    'total_apps', 'starting_apps', 'sub_apps', 'mins_played', 'motm', 'rating', 'mins'
 ]
 
-_OFFENSIVE_STATS = [
+OFFENSIVE_STATS = [
     'goals', 'assists', 'shots_per_game', 'possession_lost', 'bad_touch',
 ]
 
-_PASSING_STATS = [
+PASSING_STATS = [
     'pass_accuracy', 'passes_per_game', 'key_passes_per_game',
     'dribbles_per_game', 'fouls_won_per_game', 'offsides_per_game',
 ]
 
-_DEFENSIVE_STATS = [
+DEFENSIVE_STATS = [
     'tackles_per_game', 'interceptions_per_game', 'clearances_per_game', 'blocks_per_game',
     'clearances_per_game', 'own_goals', 'dribbled_past'
 ]
 
-_DISCIPLINE_STATS = [
+DISCIPLINE_STATS = [
     'fouls_conceded_per_game', 'yellow', 'red'
 ]
 
-_PLAYER_STATS = _OVERALL_STATS + _OFFENSIVE_STATS + _PASSING_STATS + _DEFENSIVE_STATS + _DISCIPLINE_STATS
+_PLAYER_STATS = OVERALL_STATS + OFFENSIVE_STATS + PASSING_STATS + DEFENSIVE_STATS + DISCIPLINE_STATS
 
 
 class Player:
