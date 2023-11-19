@@ -32,6 +32,7 @@ DEFENSIVE_STATS = [
 
 PASSING_STATS = [
     'key_passes_per_game',
+    'passes_per_game',
     'pass_accuracy',
     'cross_per_game',
     'long_pass_per_game',
