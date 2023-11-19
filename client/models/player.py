@@ -38,8 +38,8 @@ class Player:
         self.image = image
         self.height = height
         self.weight = weight
-        self.positions = positions.split(',')
-        self.date_of_birth = datetime.datetime.strptime(dob, '%Y-%m-%d')
+        self.positions = positions
+        self.date_of_birth = dob
         self.transfer_value = transfer_value
         self.wage = wage
         self.preferred_foot = preferred_foot
@@ -56,9 +56,9 @@ class Player:
         for stat in _PLAYER_STATS:
             setattr(self, '{stat}'.format(stat=stat), 0)
 
-    def set_stats(self, data: dict, stats: List[str]):
-        for stat in stats:
-            setattr(self, '{stat}'.format(stat=stat), data.get(stat))
+    def set_stats(self, data: dict):
+        for stat, value in data.items():
+            setattr(self, '{stat}'.format(stat=stat), value)
 
     def __repr__(self):
-        return '{name}, {team}-{position}'.format(name=self.name, team=self.club_name, position=','.join(self.positions))
+        return '{name}, {team}-{position}'.format(name=self.name, team=self.club_name, position=self.positions)

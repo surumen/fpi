@@ -1,12 +1,12 @@
 import pandas as pd
 from client.models.player import Player
 
-_FIFA_PLAYER_DATA = './data/player_data_full.csv'
+_FIFA_PLAYER_DATA = './client/scrapers/fifa/data/player_data_full.csv'
 
 _IMAGE_URL = 'https://cdn.futbin.com/content/fifa24/img/players/{profile_id}.png'
 
 
-def get_player_by_name(player_name='', csv_data: str = _FIFA_PLAYER_DATA):
+def get_player_by_name(player_name: str, team_name: str = None, csv_data: str = _FIFA_PLAYER_DATA):
     df: pd.DataFrame = pd.read_csv(csv_data)
     records = df.loc[df['name'] == player_name].to_dict('records')
     row = records[0] if len(records) > 0 else {}
@@ -22,7 +22,7 @@ def get_player_by_name(player_name='', csv_data: str = _FIFA_PLAYER_DATA):
         transfer_value=row.get('transfer_value'),
         wage=row.get('wage'),
         preferred_foot=row.get('preferred_foot'),
-        club_name=row.get('club_name'),
+        club_name=row.get('club_name', team_name),
         club_logo=row.get('club_logo'),
         club_kit_number=row.get('club_kit_number'),
         club_joined=row.get('club_joined'),

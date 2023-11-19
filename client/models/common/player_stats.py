@@ -1,4 +1,5 @@
 OVERALL_STATS = [
+    'name',
     'total_apps',
     'starting_apps',
     'sub_apps',
@@ -10,6 +11,7 @@ OVERALL_STATS = [
 ]
 
 OFFENSIVE_STATS = [
+    'name',
     'goals',
     'assists',
     'shots_per_game',
@@ -21,6 +23,7 @@ OFFENSIVE_STATS = [
 ]
 
 DEFENSIVE_STATS = [
+    'name',
     'tackles_per_game',
     'interceptions_per_game',
     'fouls_per_game',
@@ -31,6 +34,7 @@ DEFENSIVE_STATS = [
 ]
 
 PASSING_STATS = [
+    'name',
     'key_passes_per_game',
     'passes_per_game',
     'pass_accuracy',
