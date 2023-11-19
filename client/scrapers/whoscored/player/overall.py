@@ -1,7 +1,8 @@
 import time
 import pandas as pd
+from selenium import webdriver
 from selenium.webdriver.common.by import By
-from client.scrapers.whoscored import _WEB_DRIVER
+from client.scrapers.whoscored import _BROWSER_OPTIONS
 from client.utils import change_empty_df_values
 from client.models.common.player_stats import OVERALL_STATS
 
@@ -23,6 +24,7 @@ def crawl_player_overall_stats(team_id: int, api_delay_term=5):
 
     # connect web driver
     url = 'https://www.whoscored.com/Teams/{team_id}'.format(team_id=team_id)
+    _WEB_DRIVER = webdriver.Chrome(options=_BROWSER_OPTIONS)
     _WEB_DRIVER.get(url)
 
     # wait to load page
