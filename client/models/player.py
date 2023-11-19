@@ -34,6 +34,7 @@ class Player:
 
                  ) -> None:
         self.name = name
+        self.team_id = team_id
         self.full_name = full_name
         self.short_name = short_name
         self.image = image
