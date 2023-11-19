@@ -38,11 +38,11 @@ def crawl_player_overall_stats(team_id: int, api_delay_term=5):
         # split full time games and halftime games
         games = element.find_elements(By.CSS_SELECTOR, 'td')[4].text
         games = games.split('(')
-        full_time, half_time = games[0], '0'
+        full_time, half_time = games[0], 0
         if len(games) > 1:
             half_time = games[1].replace(')', '')
         else:
-            half_time = '0'
+            half_time = 0
 
         # player name
         name = element.find_elements(By.CSS_SELECTOR, 'td')[0].find_elements(By.CSS_SELECTOR, 'a')[0].find_elements(
@@ -50,7 +50,7 @@ def crawl_player_overall_stats(team_id: int, api_delay_term=5):
 
         player_dict = {
             'name': name,
-            'total_apps': full_time + half_time,
+            'total_apps': int(full_time) + int(half_time),
             'starting_apps': full_time,
             'sub_apps': half_time,
             'mins_played': element.find_elements(By.CSS_SELECTOR, 'td')[5].text,
