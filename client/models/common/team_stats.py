@@ -1,26 +1,26 @@
 OVERALL_STATS = [
-    'team_name',
+    'league_name',
     'total_games',
-    'rating',
+    'goals',
     'yellow',
-    'red'
+    'red',
+    'ball_possession',
+    'pass_accuracy',
+    'aerial_duels_won_per_game',
+    'rating',
 ]
 
 DEFENSIVE_STATS = [
-    'team_name',
-    'goals_conceded',
+    'league_name',
     'shots_allowed_per_game',
     'tackles_per_game',
     'interceptions_per_game',
     'fouls_conceded_per_game',
     'offsides_won_per_game',
-    'aerial_duels_won_per_game'
 ]
 
 PASSING_STATS = [
-    'team_name',
-    'ball_possession',
-    'pass_accuracy',
+    'league_name',
     'short_pass_per_game',
     'long_pass_per_game',
     'cross_per_game',
@@ -28,14 +28,9 @@ PASSING_STATS = [
 ]
 
 OFFENSIVE_STATS = [
-    'team_name',
-    'goals',
-    'assists',
+    'league_name',
     'shots_per_game',
     'shots_on_target_per_game',
+    'dribbles_completed_per_game',
     'fouls_won_per_game',
-    'open_play_goals',
-    'set_piece_goals',
-    'counter_attack_goals',
-    'penalty_goals',
 ]
