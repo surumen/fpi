@@ -23,7 +23,7 @@ class Player:
                  preferred_foot: str,
                  club_name: str,
                  club_logo: str,
-                 club_kit_number: int,
+                 club_kit_number: str,
                  club_joined: str,
                  club_contract_valid_until: str,
                  country_flag: str,
