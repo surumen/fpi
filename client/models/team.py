@@ -6,7 +6,10 @@ from client.models.league import League
 class Team:
     """A team."""
 
-    def __init__(self, name, team_id, leagues: List[League] = None) -> None:
+    def __init__(self,
+                 name,
+                 team_id,
+                 leagues: List[League] = None) -> None:
         self.name = name
         self.team_id = team_id
         self.leagues = leagues
@@ -38,21 +41,21 @@ class TeamSummary:
         )
 
         for l in leagues:
-            setattr(self, 'overall_{league_name}_record'.format(league_name=l.league_name),
+            setattr(self, 'overall_{league_name}_record'.format(league_name=l.slug),
                     TeamLeagueRecord(
                         team_id=self.team_id,
                         team_name=self.team_name,
                         league_id=l.league_id,
                         category=RecordCategory.OVERALL
                     ))
-            setattr(self, 'home_{league_name}_record'.format(league_name=l.league_name),
+            setattr(self, 'home_{league_name}_record'.format(league_name=l.slug),
                     TeamLeagueRecord(
                         team_id=self.team_id,
                         team_name=self.team_name,
                         league_id=l.league_id,
                         category=RecordCategory.HOME
                     ))
-            setattr(self, 'away_{league_name}_record'.format(league_name=l.league_name),
+            setattr(self, 'away_{league_name}_record'.format(league_name=l.slug),
                     TeamLeagueRecord(
                         team_id=self.team_id,
                         team_name=self.team_name,
