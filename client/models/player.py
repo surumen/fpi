@@ -60,5 +60,8 @@ class Player:
         for stat, value in data.items():
             setattr(self, '{stat}'.format(stat=stat), value)
 
+    def get_stat(self, stat):
+        return getattr(self, stat)
+
     def __repr__(self):
         return '{name}, {team}-{position}'.format(name=self.name, team=self.club_name, position=self.positions)
