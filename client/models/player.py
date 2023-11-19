@@ -11,6 +11,7 @@ class Player:
 
     def __init__(self,
                  name: str,
+                 team_id: int,
                  full_name: str,
                  short_name: str,
                  image: str,
