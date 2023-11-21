@@ -2,9 +2,9 @@ import time
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from client.scrapers.whoscored import _BROWSER_OPTIONS
-from client.utils import change_empty_df_values
-from client.models.common.player_stats import OVERALL_STATS, OFFENSIVE_STATS, PASSING_STATS, DEFENSIVE_STATS
+from app.scrapers.whoscored import _BROWSER_OPTIONS
+from app.utils import change_empty_df_values
+from app.models.common.player_stats import OVERALL_STATS, OFFENSIVE_STATS, PASSING_STATS, DEFENSIVE_STATS
 
 
 _PLAYERS_TABLE_ROW_SELECTOR = '#statistics-table-offensive #player-table-statistics-body tr'

@@ -1,7 +1,7 @@
 import pandas as pd
-from client.models.player import Player
+from app.models.player import Player
 
-_FIFA_PLAYER_DATA = './client/scrapers/fifa/data/player_data_full.csv'
+_FIFA_PLAYER_DATA = './app/scrapers/fifa/data/player_data_full.csv'
 
 _IMAGE_URL = 'https://cdn.futbin.com/content/fifa24/img/players/{profile_id}.png'
 

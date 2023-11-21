@@ -1,6 +1,6 @@
 import datetime
 from typing import List
-from client.models.common.player_stats import OVERALL_STATS, OFFENSIVE_STATS, PASSING_STATS, DEFENSIVE_STATS
+from app.models.common.player_stats import OVERALL_STATS, OFFENSIVE_STATS, PASSING_STATS, DEFENSIVE_STATS
 
 
 _PLAYER_STATS = OVERALL_STATS + OFFENSIVE_STATS + PASSING_STATS + DEFENSIVE_STATS

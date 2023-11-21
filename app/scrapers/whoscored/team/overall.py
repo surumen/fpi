@@ -2,9 +2,9 @@ import time
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from client.scrapers.whoscored import _BROWSER_OPTIONS
-from client.utils import change_empty_df_values
-from client.models.common.team_stats import OVERALL_STATS
+from app.scrapers.whoscored import _BROWSER_OPTIONS
+from app.utils import change_empty_df_values
+from app.models.common.team_stats import OVERALL_STATS
 
 
 _TEAM_TABLE_ROW_SELECTOR = '#top-team-stats-summary #top-team-stats-summary-content tr'

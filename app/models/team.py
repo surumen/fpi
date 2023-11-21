@@ -1,6 +1,6 @@
 from typing import List
-from client.models.league import League
-from client.models.common.team_stats import OVERALL_STATS, DEFENSIVE_STATS, PASSING_STATS, OFFENSIVE_STATS
+from app.models.league import League
+from app.models.common.team_stats import OVERALL_STATS, DEFENSIVE_STATS, PASSING_STATS, OFFENSIVE_STATS
 
 
 _TEAM_STATS = OVERALL_STATS + DEFENSIVE_STATS + PASSING_STATS + OFFENSIVE_STATS
